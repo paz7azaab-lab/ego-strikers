@@ -46,3 +46,27 @@ Use the existing 100-skill framework at https://github.com/paz7azaab-lab/game-de
 
 ## Current status
 This file records approved direction and acceptance criteria. It does not itself prove the game is implemented, tested on a physical phone, deployed, or monetized.
+
+## Honest implementation and test status (2026-10-20)
+
+### Implemented at prototype level — not yet validated
+- Fire, electric and energy shot modes exist in `index.html`; current effects are preliminary and their quality and gameplay behavior have not been confirmed through real testing.
+- The project is currently a 2D top-down browser prototype, not the final 3D game.
+- The current build includes basic movement, shooting, a score counter, a keeper visual, touch controls and a reduced-VFX toggle. These are prototype features, not proof of robust gameplay.
+
+### Not implemented / not verified
+- Full opponent AI and reliable goalkeeper collision/save behavior are not complete.
+- Online multiplayer and team-building systems have not been built.
+- No successful automated test run has been recorded.
+- The game has not been tested on a physical phone.
+- No claim is made that it is production-ready, deployed, monetized, or ready for a large player base.
+
+### Next work — priority order
+1. Inspect and improve the football core: player movement, ball control/dribbling, shooting, keeper collision/saves, goal detection and ball reset.
+2. Validate touch controls and responsive behavior, including preventing stuck touch inputs and checking common mobile screen sizes.
+3. Add repeatable automated checks and record actual results; fix runtime errors before marking tests passed.
+4. Improve the pitch and player visuals toward a polished 3D style only after the core loop is stable. Keep the original visual identity and mobile performance in mind.
+5. Re-check relevant areas of the 100-skill framework and record each skill's status with evidence. Do not mark a task passed without a verifiable test.
+
+**Evidence rule:** this status is a candid project note, not a test report. Update it only when changes have actually been committed and the relevant behavior has been verified.
+
