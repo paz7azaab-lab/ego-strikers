@@ -78,3 +78,12 @@ This file records approved direction and acceptance criteria. It does not itself
 - These changes were fetched back from GitHub to confirm the committed source contains them.
 - **Not yet verified:** runtime behavior, scoring edge cases, actual mobile touch behavior, visual quality, and automated tests. The goalkeeper logic is a first pass, not complete opponent AI.
 
+## Follow-up implementation — 2026-10-20
+- Improved the pitch with a color gradient and added more depth to the player's shirt shading (2D visual polish, not true 3D).
+- Improved slow-ball dribbling/close control so the ball follows near the player's feet when close and moving slowly.
+- Strengthened the first-pass goalkeeper save response and added a brief goal zoom effect.
+- Added dependency-free static checks at `tests/check-prototype.mjs` and a GitHub Actions workflow at `.github/workflows/prototype-checks.yml` for pushes and pull requests.
+- Source was fetched back from GitHub; the inline game script passed a parse-only JavaScript syntax check and required feature strings were present.
+- The GitHub Actions workflow has not yet been observed completing successfully in this session. Static source checks are not gameplay tests and do not verify collision/scoring in a running browser or on a phone.
+- Remaining: true 3D assets/renderer, full opponent AI, online multiplayer, team building, and real-device playtesting.
+
