@@ -8,7 +8,7 @@ const gameScript = scripts[scripts.length - 1][1];
 assert.ok(gameScript.length > 1000, 'game script should not be empty');
 new Function(gameScript); // Parse-only syntax check; does not run browser code.
 
-for (const selector of ['id="game"', 'id="start"', 'id="shoot"', 'id="touchshoot"', 'data-dir="up"', 'data-mode="electric"', 'data-mode="fire"', 'data-mode="energy"']) {
+for (const selector of ['id="game"', 'id="start"', 'id="shoot"', 'id="touchshoot"', 'data-dir="up"', 'data-mode="electric"', 'data-mode="fire"', 'data-mode="energy"', 'id="timer"', 'id="restart"']) {
   assert.ok(html.includes(selector), `missing expected UI/control: ${selector}`);
 }
 for (const feature of ['keeperDist', 'scoreEl.textContent=score', 'function resetBall()', 'touchDirs', 'visibilitychange', 'kickTime', "mode==='electric'&&i>0"]) {
