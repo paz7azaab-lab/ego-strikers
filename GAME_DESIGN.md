@@ -70,3 +70,11 @@ This file records approved direction and acceptance criteria. It does not itself
 
 **Evidence rule:** this status is a candid project note, not a test report. Update it only when changes have actually been committed and the relevant behavior has been verified.
 
+## Implementation log — 2026-10-20
+- Updated `index.html` in commit `7c94f869192bc77c5f1646c5afdc9c9ec39834e7`.
+- Added a preliminary goalkeeper collision/save response so an upward-moving ball can rebound before the goal line.
+- Added a brief kick follow-through visual and a first-pass electric zig-zag trail.
+- Clear keyboard and touch input state when the window loses focus or the page becomes hidden, reducing the chance of stuck movement controls.
+- These changes were fetched back from GitHub to confirm the committed source contains them.
+- **Not yet verified:** runtime behavior, scoring edge cases, actual mobile touch behavior, visual quality, and automated tests. The goalkeeper logic is a first pass, not complete opponent AI.
+
