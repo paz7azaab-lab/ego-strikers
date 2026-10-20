@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 
 const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
-const scripts = [...html.matchAll(/<script>([\s\\S]*?)<\/script>/gi)];
+const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/gi)];
 assert.ok(scripts.length >= 1, 'index.html must contain an inline game script');
 const gameScript = scripts[scripts.length - 1][1];
 assert.ok(gameScript.length > 1000, 'game script should not be empty');
