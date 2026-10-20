@@ -47,3 +47,15 @@ Status vocabulary follows the framework: planned, in progress, passed, failed, b
 3. Test touch controls on an actual phone and fix any stuck inputs/layout issues.
 4. Improve opponent behavior and shot aiming only after the current loop passes.
 5. Consider a 3D engine/asset pipeline after core gameplay is stable; online play requires server-authoritative state and abuse/security design.
+
+
+## 20-feature implementation pass — 2026-10-20
+- Inspected main in paz7azaab-lab/ego-strikers and the canonical skill index in game-dev-100-skills/GAME_SKILLS_INDEX.md before changing code.
+- Game UI/source commit: https://github.com/paz7azaab-lab/ego-strikers/commit/159b369b6481aa776370a339a0f85f52342284cd
+- Added local prototype systems: three player styles, three stadium palettes, training toggle, session-only skill points/upgrades, kit color selection, cup goal counter, session challenges, tutorial panel, match stats, touch-control display toggle, goal-event recap, and a pass/setup action. Existing signature shots, keeper/rival, match timer, goal zoom and VFX remain.
+- The pass action is not teammate passing; the goal recap is not a recorded replay; cup/challenges/skills are local-session prototypes and do not persist or use a server.
+- Not implemented as real systems: true 3D rendering, online multiplayer/friends, secure server-backed accounts/progression, and real-money monetization. UI alone does not make these complete.
+- Added static assertions for feature controls in commit https://github.com/paz7azaab-lab/ego-strikers/commit/d4badde49b33d4f195e7367fc0b572f5145d54e8
+- Syntax/source check: fetched inline script compiled with the JavaScript parser in the execution environment; expected feature-control markers were present.
+- Not yet verified: executing node tests/check-prototype.mjs, GitHub Actions result, browser playthrough, real phone touch, actual gameplay balancing, true 3D, networking, persistence, or monetization.
+- Relevant skill areas reviewed/applied as implementation lenses: 2–5, 7–10, 16–18, 21–25, 28–29, 31–39, 41–47, 51–56, 60, 61–70, 80–90, 91–100. This does not mean every area was implemented or passed; online/security/revenue areas remain planned or blocked pending architecture and testing.
