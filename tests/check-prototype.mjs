@@ -11,7 +11,7 @@ new Function(gameScript); // Parse-only syntax check; does not run browser code.
 for (const selector of ['id="game"', 'id="start"', 'id="shoot"', 'id="touchshoot"', 'data-dir="up"', 'data-mode="electric"', 'data-mode="fire"', 'data-mode="energy"', 'id="timer"', 'id="restart"']) {
   assert.ok(html.includes(selector), `missing expected UI/control: ${selector}`);
 }
-for (const feature of ['keeperDist', 'scoreEl.textContent=score', 'function resetBall()', 'touchDirs', 'visibilitychange', 'kickTime', "mode==='electric'&&i>0", 'function resetMatch()', 'matchTime<=0', 'rival.vx']) {
+for (const feature of ['keeperDist', 'scoreEl.textContent=score', 'function resetBall()', 'touchDirs', 'visibilitychange', 'kickTime', "mode==='electric'&&i>0", 'function resetMatch()', 'matchTime<=0', 'rival.vx', 'id="featurebar"', 'id="pass"', 'id="players"', 'id="stadium"', 'id="training"', 'id="skills"', 'id="customize"', 'id="tournament"', 'id="missions"', 'id="tutorial"', 'id="stats"', 'id="controlsConfig"', 'id="replay"']) {
   assert.ok(gameScript.includes(feature), `missing expected gameplay feature: ${feature}`);
 }
 console.log('Prototype static checks passed.');
