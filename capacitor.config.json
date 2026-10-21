@@ -1,0 +1,9 @@
+{
+  "appId": "com.egostrikers.game",
+  "appName": "EGO STRIKERS",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "backgroundColor": "#071525"
+  }
+}
