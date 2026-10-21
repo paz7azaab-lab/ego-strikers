@@ -8,10 +8,24 @@ const gameScript = scripts[scripts.length - 1][1];
 assert.ok(gameScript.length > 1000, 'game script should not be empty');
 new Function(gameScript); // Parse-only syntax check; does not run browser code.
 
-for (const selector of ['id="game"', 'id="start"', 'id="shoot"', 'id="touchshoot"', 'data-dir="up"', 'data-mode="electric"', 'data-mode="fire"', 'data-mode="energy"', 'id="timer"', 'id="restart"']) {
+for (const selector of [
+  'id="game"', 'id="start"', 'id="shoot"', 'id="touchshoot"',
+  'data-dir="up"', 'data-mode="electric"', 'data-mode="fire"',
+  'data-mode="energy"', 'id="timer"', 'id="restart"',
+  'id="featurebar"', 'id="pass"', 'id="players"', 'id="stadium"',
+  'id="training"', 'id="skills"', 'id="customize"', 'id="tournament"',
+  'id="missions"', 'id="tutorial"', 'id="stats"', 'id="controlsConfig"',
+  'id="replay"', 'id="innovations"'
+]) {
   assert.ok(html.includes(selector), `missing expected UI/control: ${selector}`);
 }
-for (const feature of ['keeperDist', 'scoreEl.textContent=score', 'function resetBall()', 'touchDirs', 'visibilitychange', 'kickTime', "mode==='electric'&&i>0", 'function resetMatch()', 'matchTime<=0', 'rival.vx', 'id="featurebar"', 'id="pass"', 'id="players"', 'id="stadium"', 'id="training"', 'id="skills"', 'id="customize"', 'id="tournament"', 'id="missions"', 'id="tutorial"', 'id="stats"', 'id="controlsConfig"', 'id="replay"', 'id="innovations"']) {
+for (const feature of [
+  'keeperDist', 'scoreEl.textContent=score', 'function resetBall()',
+  'touchDirs', 'visibilitychange', 'kickTime', "mode==='electric'&&i>0",
+  'function resetMatch()', 'matchTime<=0', 'rival.vx', 'hunterVision',
+  'keeperShotMemory', 'weatherMode', 'adaptiveDrill', 'signatureLevel',
+  'feintAction', 'comboAction', 'whatIfAction'
+]) {
   assert.ok(gameScript.includes(feature), `missing expected gameplay feature: ${feature}`);
 }
 console.log('Prototype static checks passed.');
