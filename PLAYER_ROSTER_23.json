@@ -1,0 +1,174 @@
+{
+  "title": "EGO STRIKERS fixed roster",
+  "version": 1,
+  "matchFormat": { "blue": 11, "red": 11, "reserve": 1, "totalCharacters": 23 },
+  "rules": [
+    "Only the 23 characters listed here may appear.",
+    "Blue and red teams each field 11 players including one goalkeeper.",
+    "Blaze is the only reserve character and is not added to the active match.",
+    "This JSON is a roster/design contract; it does not contain 3D model files."
+  ],
+  "characters": [
+  {
+    "id": 1,
+    "name": "Blaze",
+    "team": "reserve",
+    "role": "reserve",
+    "look": "bald; mustache; tattoos; navy/electric-blue kit"
+  },
+  {
+    "id": 2,
+    "name": "Kai",
+    "team": "blue",
+    "role": "controlled striker",
+    "look": "spiky dark hair; navy kit; cyan accents"
+  },
+  {
+    "id": 3,
+    "name": "Ren",
+    "team": "blue",
+    "role": "outfield",
+    "look": "fringe hair; violet accents"
+  },
+  {
+    "id": 4,
+    "name": "Riku",
+    "team": "blue",
+    "role": "outfield",
+    "look": "spiky hair; white accents"
+  },
+  {
+    "id": 5,
+    "name": "Sora",
+    "team": "blue",
+    "role": "outfield",
+    "look": "curly hair; mint accents"
+  },
+  {
+    "id": 6,
+    "name": "Toma",
+    "team": "blue",
+    "role": "outfield",
+    "look": "short hair; amber accents"
+  },
+  {
+    "id": 7,
+    "name": "Yuto",
+    "team": "blue",
+    "role": "outfield",
+    "look": "fringe hair; rose accents"
+  },
+  {
+    "id": 8,
+    "name": "Haru",
+    "team": "blue",
+    "role": "outfield",
+    "look": "spiky hair; ice-blue accents"
+  },
+  {
+    "id": 9,
+    "name": "Akio",
+    "team": "blue",
+    "role": "outfield",
+    "look": "short hair; coral accents"
+  },
+  {
+    "id": 10,
+    "name": "Daichi",
+    "team": "blue",
+    "role": "outfield",
+    "look": "curly hair; lavender accents"
+  },
+  {
+    "id": 11,
+    "name": "Shin",
+    "team": "blue",
+    "role": "outfield",
+    "look": "short hair; gold accents"
+  },
+  {
+    "id": 12,
+    "name": "Gaku",
+    "team": "blue",
+    "role": "goalkeeper",
+    "look": "cyan goalkeeper kit"
+  },
+  {
+    "id": 13,
+    "name": "Kuro",
+    "team": "red",
+    "role": "outfield",
+    "look": "spiky hair; crimson kit"
+  },
+  {
+    "id": 14,
+    "name": "Reo",
+    "team": "red",
+    "role": "outfield",
+    "look": "fringe hair; gold accents"
+  },
+  {
+    "id": 15,
+    "name": "Jin",
+    "team": "red",
+    "role": "outfield",
+    "look": "spiky hair; violet accents"
+  },
+  {
+    "id": 16,
+    "name": "Akira",
+    "team": "red",
+    "role": "outfield",
+    "look": "curly hair; mint accents"
+  },
+  {
+    "id": 17,
+    "name": "Ryo",
+    "team": "red",
+    "role": "outfield",
+    "look": "short hair; amber accents"
+  },
+  {
+    "id": 18,
+    "name": "Nagi",
+    "team": "red",
+    "role": "outfield",
+    "look": "fringe hair; white accents"
+  },
+  {
+    "id": 19,
+    "name": "Taiga",
+    "team": "red",
+    "role": "outfield",
+    "look": "spiky hair; ice-blue accents"
+  },
+  {
+    "id": 20,
+    "name": "Eiji",
+    "team": "red",
+    "role": "outfield",
+    "look": "short hair; lavender accents"
+  },
+  {
+    "id": 21,
+    "name": "Kenta",
+    "team": "red",
+    "role": "outfield",
+    "look": "curly hair; gold accents"
+  },
+  {
+    "id": 22,
+    "name": "Shoma",
+    "team": "red",
+    "role": "outfield",
+    "look": "short hair; pale-blue accents"
+  },
+  {
+    "id": 23,
+    "name": "Vex",
+    "team": "red",
+    "role": "goalkeeper",
+    "look": "distinct red goalkeeper kit"
+  }
+]
+}
