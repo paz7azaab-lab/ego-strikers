@@ -24,7 +24,7 @@ for (const feature of [
   'touchDirs', 'visibilitychange', 'kickTime', "mode==='electric'&&i>0",
   'function resetMatch()', 'matchTime<=0', 'rival.vx', 'hunterVision',
   'keeperShotMemory', 'weatherMode', 'adaptiveDrill', 'signatureLevel',
-  'feintAction', 'comboAction', 'whatIfAction'
+  'feintAction', 'comboAction', 'whatIfAction', 'ROSTER_23', 'rosterId', 'THE FIXED 23'
 ]) {
   assert.ok(gameScript.includes(feature), `missing expected gameplay feature: ${feature}`);
 }
