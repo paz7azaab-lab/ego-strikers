@@ -70,3 +70,13 @@ Status vocabulary follows the framework: planned, in progress, passed, failed, b
 - These are prototype systems, not production-complete features. Weather currently changes visuals only; goalkeeper memory records recent shot types but does not yet alter its prediction logic; the what-if panel gives heuristic advice, not a simulated alternate replay; team combo is a local counter, not teammate AI; progression is not saved between sessions; no online service or persistent player profile was added.
 - Not yet verified: executing `node tests/check-prototype.mjs`, GitHub Actions status, browser playthrough, touch play on a physical phone, balance, or performance. No claim that all 100 skill areas passed.
 - Relevant skill lenses: 2–6, 7–10, 16–18, 21–25, 28–30, 33, 37–39, 41–49, 51–56, 60, 69, 71–80, 81–92, 98–100; application is partial and the quality gates remain open.
+
+
+## Fixed 23-character roster pass — 2026-10-27
+- Re-inspected repository `paz7azaab-lab/ego-strikers`, branch `main`; runtime is still a single-file Canvas 2D browser prototype.
+- Added `PLAYER_ROSTER_23.json` as the canonical fixed-cast contract: 11 blue + 11 red players including goalkeepers, plus Blaze as the one reserve character. No procedural extra characters are intended.
+- Added a `ROSTER_23` data definition in `index.html`, assigned roster IDs to the 9 supporting outfield players on each side, added simple hair/accent-color variants to their existing 2D render, and changed the Player Style panel to disclose the fixed roster.
+- Added static source assertions for the roster.
+- This pass is a roster/2D prototype foundation only. It does **not** create real 3D character meshes, rigged skeletons, GLB assets, or animation clips. The requested visual reference images are not 3D assets; the game remains 2D until those assets and a 3D rendering path are added.
+- Relevant 100-skill review lenses: requirements/scope, character art direction, readability, gameplay integration, asset pipeline, mobile performance, and test/quality gates. These were applied as review lenses, not claimed as 100 passed skills.
+- Not yet verified: running `npm test`, GitHub Actions status after these commits, browser gameplay, or physical-phone behavior.
