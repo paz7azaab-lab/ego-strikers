@@ -56,6 +56,17 @@ function makePlayer(spec,teamIndex){
  const torso=new THREE.Mesh(new THREE.BoxGeometry(.68,.78,.38),kit);torso.position.y=1.12;torso.castShadow=true;root.add(torso);
  const accent=new THREE.Mesh(new THREE.BoxGeometry(.69,.12,.395),mat(spec.accent));accent.position.set(0,1.28,0);root.add(accent);
  const head=new THREE.Mesh(new THREE.SphereGeometry(.25,12,10),skin);head.position.y=1.77;head.castShadow=true;root.add(head);
+ // Facial features and jersey detailing improve the stylized 3D roster without external assets.
+ const eyeWhite=mat('#f7faff'), iris=mat(spec.team==='red'?'#ff514e':'#48dfff'), brow=mat('#171923');
+ for(const side of [-1,1]){
+  const eye=new THREE.Mesh(new THREE.SphereGeometry(.052,10,8),eyeWhite);eye.scale.set(1,.72,.35);eye.position.set(side*.09,1.765,.222);root.add(eye);
+  const pupil=new THREE.Mesh(new THREE.SphereGeometry(.026,8,6),iris);pupil.position.set(side*.09,1.765,.243);root.add(pupil);
+  const eyebrow=new THREE.Mesh(new THREE.BoxGeometry(.105,.025,.025),brow);eyebrow.position.set(side*.09,1.825,.218);eyebrow.rotation.z=side*-.14;root.add(eyebrow);
+  const ear=new THREE.Mesh(new THREE.SphereGeometry(.055,8,7),skin);ear.scale.set(.55,1,.5);ear.position.set(side*.245,1.74,0);root.add(ear);
+ }
+ const collar=new THREE.Mesh(new THREE.TorusGeometry(.19,.025,6,16),mat(spec.accent));collar.rotation.x=Math.PI/2;collar.position.set(0,1.48,.015);root.add(collar);
+ const crest=new THREE.Mesh(new THREE.BoxGeometry(.105,.12,.025),mat(spec.accent));crest.position.set(.19,1.31,.205);root.add(crest);
+ const shirtNumber=new THREE.Mesh(new THREE.BoxGeometry(.16,.18,.018),mat(spec.accent));shirtNumber.position.set(0,.99,.205);root.add(shirtNumber);
  const hairmat=mat(spec.name==='Blaze'?'#20232b':spec.team==='red'?'#201627':'#15223c');
  if(spec.hair!=='bald'){const hair=new THREE.Mesh(new THREE.SphereGeometry(.255,10,7,0,Math.PI*2,0,Math.PI*.57),hairmat);hair.position.y=1.84;root.add(hair);if(spec.hair==='spiky'){for(let i=0;i<3;i++){const spike=new THREE.Mesh(new THREE.ConeGeometry(.1,.28,5),hairmat);spike.position.set((i-1)*.14,2.04,-.02);spike.rotation.z=(i-1)*-.25;root.add(spike)}}if(spec.hair==='fringe'){const fringe=new THREE.Mesh(new THREE.BoxGeometry(.4,.1,.1),hairmat);fringe.position.set(0,1.79,.21);root.add(fringe)}if(spec.hair==='curly'){for(let i=0;i<4;i++){const curl=new THREE.Mesh(new THREE.SphereGeometry(.09,7,6),hairmat);curl.position.set((i-1.5)*.12,1.99,.02);root.add(curl)}}}
  if(spec.name==='Blaze'){const moustache=new THREE.Mesh(new THREE.BoxGeometry(.25,.06,.05),dark);moustache.position.set(0,1.64,.235);root.add(moustache);for(let i=0;i<4;i++){const tattoo=new THREE.Mesh(new THREE.BoxGeometry(.045,.2,.02),mat('#111b2b'));tattoo.position.set(-.24+i*.14,.98,.205);root.add(tattoo)}}
